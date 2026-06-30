@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Til dig ❤️</title>
+    <title>Til dig</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -12,37 +14,64 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<div class="container">
+<div class="background-glow"></div>
 
-    <h1>Til dig</h1>
+<main class="scene scene-login">
 
-    <p class="intro">
-        Jeg har lavet noget særligt til dig.<br>
-        Indtast adgangskoden for at åbne det.
-    </p>
+    <section class="login-card">
 
-    <input
-        id="password"
-        type="password"
-        placeholder="Adgangskode">
+        <div class="top-line"></div>
 
-    <button id="unlockButton">
-        Åbn
-    </button>
+        <h1>Til dig</h1>
 
-    <p class="hint">
-        Hint: Vores ord for "helt crazy".
-    </p>
+        <p class="subtitle">
 
-    <p id="error"></p>
+            Der venter noget særligt.
 
-</div>
+            <br>
+
+            Indtast adgangskoden for at åbne det.
+
+        </p>
+
+        <div class="input-wrapper">
+
+            <span class="lock">🔒</span>
+
+            <input
+                id="password"
+                type="password"
+                autocomplete="off"
+                spellcheck="false"
+                placeholder="Adgangskode">
+
+        </div>
+
+        <button id="unlockButton">
+
+            Åbn
+
+        </button>
+
+        <p class="hint">
+
+            Hint: Vores ord for "helt crazy".
+
+        </p>
+
+        <p id="error"></p>
+
+    </section>
+
+</main>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
