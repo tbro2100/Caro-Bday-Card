@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Til dig</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<div class="background"></div>
+
+<section id="loginScene" class="scene active">
+  <div class="card">
+    <div class="gold-line"></div>
+    <h1>Til dig</h1>
+    <p class="subtitle">
+      Jeg har lavet noget særligt.<br>
+      Indtast adgangskoden for at åbne det.
+    </p>
+
+    <div class="input-wrap">
+      <span class="lock">🔒</span>
+      <input id="password" type="password" placeholder="Adgangskode">
+    </div>
+
+    <button id="unlockButton">Åbn</button>
+
+    <p class="hint">Hint: Vores ord for "helt crazy".</p>
+    <p id="error"></p>
+  </div>
+</section>
+
+<section id="envelopeScene" class="scene hidden">
+  <div class="placeholder">
+    <h2>Kuverten kommer i næste version</h2>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
