@@ -2,8 +2,10 @@
 <html lang="da">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <meta name="theme-color" content="#080808">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <title>Til dig</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,10 +21,11 @@
     <p class="login-sub">Jeg har lavet noget særligt.<br>Det venter bare på dig.</p>
     <div class="pw-wrap">
       <input type="password" id="pw" placeholder="••••••••••"
-        autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="go">
+        autocomplete="off" autocorrect="off" autocapitalize="none"
+        spellcheck="false" enterkeyhint="go" inputmode="text">
     </div>
     <p class="pw-hint">— Vores ord for helt crazy —</p>
-    <button class="btn-open" id="btn-open">Åbn</button>
+    <button class="btn-open" id="btn-open" type="button">Åbn</button>
     <p class="pw-error" id="pw-err">Prøv igen</p>
   </div>
 </div>
@@ -52,17 +55,4 @@
 <div class="screen" id="s-card">
   <div class="full-card" id="full-card">
     <div class="card-top-rule"></div>
-    <p class="cline"   id="l1">[Placeholder — linje 1]</p>
-    <div class="crule" id="r1"></div>
-    <p class="cline"   id="l2">[Placeholder — linje 2]</p>
-    <p class="cline it" id="l3">[Placeholder — linje 3]</p>
-    <div class="crule" id="r2"></div>
-    <p class="cline"   id="l4">[Placeholder — linje 4]</p>
-    <p class="cline it" id="l5">[Placeholder — linje 5]</p>
-    <p class="csig"    id="lsig">— [Navn]</p>
-  </div>
-</div>
-
-<script src="script.js"></script>
-</body>
-</html>
+    <p class="c
