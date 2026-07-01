@@ -1,29 +1,68 @@
-<!DOCTYPE html><html lang='da'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Til dig</title><link rel='stylesheet' href='style.css'></head><body>
-<div id='login' class='screen'>
-<div class='card'>
-<h1>Til dig</h1>
-<p>Jeg har lavet noget særligt til dig.<br>Indtast adgangskoden for at åbne det.</p>
-<input id='pw' type='password' placeholder='Adgangskode'>
-<button onclick='unlock()'>Åbn</button>
-<p class='hint'>Hint: Vores ord for "helt crazy".</p>
-<p id='err'></p>
-</div></div>
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#080808">
+  <title>Til dig</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<div id='envelope' class='screen hidden'>
-<div class='env' onclick='openCard()'>
-<div class='letter'></div>
-<div class='flap'></div>
-</div>
-<p>Tryk på kuverten</p>
+<!-- S1 · LOGIN -->
+<div class="screen" id="s-login">
+  <div class="login-wrap">
+    <h1 class="login-title">Til dig</h1>
+    <p class="login-sub">Jeg har lavet noget særligt.<br>Det venter bare på dig.</p>
+    <div class="pw-wrap">
+      <input type="password" id="pw" placeholder="••••••••••"
+        autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="go">
+    </div>
+    <p class="pw-hint">— Vores ord for helt crazy —</p>
+    <button class="btn-open" id="btn-open">Åbn</button>
+    <p class="pw-error" id="pw-err">Prøv igen</p>
+  </div>
 </div>
 
-<div id='card' class='screen hidden'>
-<div class='card paper'>
-<h2>Fødselsdagshilsen</h2>
-<p>Her kommer din personlige tekst.</p>
-<p>Vi udskifter den senere.</p>
-<p class='sig'>Thomas ❤️</p>
+<!-- S2 · KUVERT -->
+<div class="screen" id="s-envelope">
+  <p class="env-prompt" id="env-prompt">Tryk på kuverten</p>
+  <div class="env-outer" id="env-outer">
+    <div class="c-card" id="c-card">
+      <div class="c-card-face"></div>
+    </div>
+    <div class="env-box">
+      <div class="env-body">
+        <div class="fl fl-left"></div>
+        <div class="fl fl-right"></div>
+        <div class="fl fl-bot"></div>
+        <div class="env-seal"><span>T</span></div>
+      </div>
+      <div class="env-flap" id="env-flap">
+        <div class="env-flap-face"></div>
+      </div>
+    </div>
+  </div>
 </div>
+
+<!-- S3 · KORT -->
+<div class="screen" id="s-card">
+  <div class="full-card" id="full-card">
+    <div class="card-top-rule"></div>
+    <p class="cline"   id="l1">[Placeholder — linje 1]</p>
+    <div class="crule" id="r1"></div>
+    <p class="cline"   id="l2">[Placeholder — linje 2]</p>
+    <p class="cline it" id="l3">[Placeholder — linje 3]</p>
+    <div class="crule" id="r2"></div>
+    <p class="cline"   id="l4">[Placeholder — linje 4]</p>
+    <p class="cline it" id="l5">[Placeholder — linje 5]</p>
+    <p class="csig"    id="lsig">— [Navn]</p>
+  </div>
 </div>
-<script src='script.js'></script>
-</body></html>
+
+<script src="script.js"></script>
+</body>
+</html>
